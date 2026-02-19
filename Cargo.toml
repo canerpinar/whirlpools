@@ -14,4 +14,4 @@ exclude = [
 overflow-checks = false
 
 [dependencies]
-bytemuck = "1.24.0"  # Relax version pin, e.g., from "=1.22.0" to "1.23"
+bytemuck = "1.25.0"  # Relax version pin, e.g., from "=1.22.0" to "1.23"
