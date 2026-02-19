@@ -18,6 +18,7 @@ default = []
 solana-client = { version = "^3" }
 solana-rent = { version = "^3" }
 solana-sysvar-id = { version = "^3" }
+bytemuck = {version = "^1.23.2"}
 solana-account-decoder = { version = "^3" }
 solana-program-pack = { version = "^3" }
 solana-pubkey = { version = "^3" }
