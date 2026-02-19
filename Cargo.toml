@@ -12,3 +12,6 @@ exclude = [
 
 [profile.release]
 overflow-checks = false
+
+[dependencies]
+bytemuck = "1.23"  # Relax version pin, e.g., from "=1.22.0" to "1.23"
