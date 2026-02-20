@@ -6,7 +6,7 @@ use solana_program::{custom_heap_default, custom_panic_default};
 
 const MAX_TX_ACCOUNTS: usize = 64;
 
-#[cfg(feature = "whirlpool-entrypoint")]
+#[cfg(all(feature = "whirlpool-entrypoint", not(feature = "no-entrypoint")))]
 #[no_mangle]
 pub unsafe extern "C" fn entrypoint(input: *mut u8) -> u64 {
     type PinocchioInstructionHandler = fn(&[AccountInfo], &[u8]) -> crate::pinocchio::Result<()>;
@@ -69,5 +69,7 @@ pub unsafe extern "C" fn entrypoint(input: *mut u8) -> u64 {
     }
 }
 
+#[cfg(all(feature = "whirlpool-entrypoint", not(feature = "no-entrypoint")))]
 custom_heap_default!();
+#[cfg(all(feature = "whirlpool-entrypoint", not(feature = "no-entrypoint")))]
 custom_panic_default!();
